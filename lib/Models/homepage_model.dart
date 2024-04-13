@@ -36,19 +36,19 @@ List<HomePageCardModel> cardList = [
 // Home page category icons model
 
 class HomepageIconsModel {
-  final IconData icon;
+  final String icon;
 
   HomepageIconsModel({required this.icon});
 }
 
 List<HomepageIconsModel> homeIconsList = [
-  HomepageIconsModel(icon: Icons.maps_home_work_outlined),
-  HomepageIconsModel(icon: Icons.shopping_cart_rounded),
-  HomepageIconsModel(icon: Icons.cleaning_services),
-  HomepageIconsModel(icon: Icons.car_crash_outlined),
-  HomepageIconsModel(icon: Icons.cut),
-  HomepageIconsModel(icon: Icons.sports),
-  HomepageIconsModel(icon: Icons.home),
+  HomepageIconsModel(icon: 'assets/images/icon1.png'),
+  HomepageIconsModel(icon: 'assets/images/icon2.png'),
+  HomepageIconsModel(icon: 'assets/images/icon3.png'),
+  HomepageIconsModel(icon: 'assets/images/icon4.png'),
+  HomepageIconsModel(icon: 'assets/images/icon5.png'),
+  HomepageIconsModel(icon: 'assets/images/icon7.png'),
+  HomepageIconsModel(icon: 'assets/images/icon8.png'),
 ];
 
 //Home page category homeclean

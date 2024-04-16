@@ -1,7 +1,5 @@
 // Home page cards model
 
-import 'package:flutter/material.dart';
-
 class HomePageCardModel {
   final String title;
   final String image;

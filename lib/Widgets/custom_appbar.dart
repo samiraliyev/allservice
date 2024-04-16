@@ -5,66 +5,31 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  CustomAppbar({super.key, this.title});
+  CustomAppbar({super.key, this.title, required this.backgroundColor});
   Widget? leading;
   List<Widget>? actions;
-  final String? title;
+  final Widget? title;
   bool? centerTitle;
+  final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          RichText(
-            text: TextSpan(children: [
-              TextSpan(
-                  text: "Salam ",
-                  style:
-                      AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500)),
-              TextSpan(
-                  text: "Sərdar",
-                  style: AppFonts.pacifico(
-                      color: AppColor.btnColor,
-                      size: 18,
-                      fontWeight: FontWeight.w500))
-            ]),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset(
-                AppPath.logo,
-                width: 28,
-              ),
-              RichText(
-                text: TextSpan(children: [
-                  TextSpan(
-                      text: "Yer",
-                      style: AppFonts.pacifico(
-                          size: 18, fontWeight: FontWeight.w500)),
-                  TextSpan(
-                      text: " : Baku",
-                      style: AppFonts.pacifico(
-                          color: AppColor.btnColor,
-                          size: 18,
-                          fontWeight: FontWeight.w500))
-                ]),
-              ),
-            ],
-          )
-        ],
-      ),
+      excludeHeaderSemantics: false,
+      forceMaterialTransparency: false,
+      elevation: 0,
+      backgroundColor: backgroundColor,
+      shadowColor: Colors.white,
+      surfaceTintColor: Colors.white,
+      title: title,
       actions: [
         Stack(
           children: [
             IconButton(
                 onPressed: () {},
-                icon: const Icon(
+                icon: Icon(
                   Icons.notifications_none,
                   size: 30,
+                  color: AppColor.btnColor,
                 )),
             Positioned(
                 right: 14,
@@ -75,15 +40,18 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.red),
-                ))
+                )),
           ],
         ),
         const SizedBox(
           width: 10,
         ),
-        CircleAvatar(
-          child: ClipOval(
-            child: Image.asset(AppPath.logo),
+        Padding(
+          padding: EdgeInsets.only(right: 10),
+          child: CircleAvatar(
+            child: ClipOval(
+              child: Image.asset(AppPath.logo),
+            ),
           ),
         )
       ],
@@ -93,4 +61,60 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+//Hello for user with his name [component]
+
+class titleAppBarCustom extends StatelessWidget {
+  const titleAppBarCustom({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+      text: TextSpan(children: [
+        TextSpan(
+            text: "Salam ",
+            style: AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500)),
+        TextSpan(
+            text: "Sərdar",
+            style: AppFonts.pacifico(
+                color: AppColor.btnColor,
+                size: 18,
+                fontWeight: FontWeight.w500))
+      ]),
+    );
+  }
+}
+
+//Localation helper for app bar
+class locAppBarCustom extends StatelessWidget {
+  const locAppBarCustom({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset(
+          AppPath.logo,
+          width: 28,
+        ),
+        RichText(
+          text: TextSpan(children: [
+            TextSpan(
+                text: "Yer",
+                style:
+                    AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500)),
+            TextSpan(
+                text: " : Baku",
+                style: AppFonts.pacifico(
+                    color: AppColor.btnColor,
+                    size: 18,
+                    fontWeight: FontWeight.w500))
+          ]),
+        ),
+      ],
+    );
+  }
 }

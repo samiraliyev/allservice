@@ -15,17 +15,18 @@ class CarouselCards extends StatelessWidget {
             return Container(
               child: Card(
                 child: Container(
+                  padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10)),
                   child: Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: EdgeInsets.all(0),
                         child: Image.asset('assets/images/card_img.png'),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: EdgeInsets.symmetric(horizontal: 5),
                         child: Text(
                           "Kristal Abşeron-da yaz endirimləri başladı...!",
                           style: TextStyle(
@@ -33,7 +34,7 @@ class CarouselCards extends StatelessWidget {
                               color: AppColor.btnColor,
                               fontSize: 17),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

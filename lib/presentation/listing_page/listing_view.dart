@@ -1,12 +1,13 @@
 import 'package:allservice/Widgets/custom_appbar.dart';
-import 'package:allservice/presentation/home_page/components/carousel_cards.dart';
-import 'package:allservice/presentation/home_page/components/category_icons.dart';
+import 'package:allservice/presentation/home_page/components/body_component.dart';
 import 'package:allservice/presentation/home_page/components/clean_home_component.dart';
+import 'package:allservice/presentation/home_page/components/pretty_component.dart';
 import 'package:allservice/presentation/home_page/components/sitter_component.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class HomePageView extends StatelessWidget {
-  const HomePageView({super.key});
+class ListingView extends StatelessWidget {
+  const ListingView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,28 +15,23 @@ class HomePageView extends StatelessWidget {
       appBar: CustomAppbar(
         backgroundColor: Colors.white,
         title: const Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [titleAppBarCustom(), locAppBarCustom()],
         ),
       ),
-      backgroundColor: Colors.white,
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(10),
+      body: const Center(
+        child: SingleChildScrollView(
           child:  Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CarouselCards(),
-              SizedBox(
-                height: 25,
-              ),
-              CategoryIcons(),
-              SizedBox(
-                height: 25,
-              ),
+                
+              BodyAllComponent(),
+             
               CleanHomeComponent(),
+             
+              PrettyAllComponent(),
+               
               SitterHomeComponent(),
             ],
           ),

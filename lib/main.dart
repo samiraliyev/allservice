@@ -1,6 +1,9 @@
 import 'package:allservice/Widgets/custom_appbar.dart';
 import 'package:allservice/constants/colors/app_colors.dart';
+import 'package:allservice/presentation/category_detail_page/detail_view.dart';
 import 'package:allservice/presentation/home_page/home_page_view.dart';
+import 'package:allservice/presentation/listing_page/listing_view.dart';
+import 'package:allservice/presentation/search_page/search_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,16 +39,16 @@ class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(),
       bottomNavigationBar: NavigationBar(
+        indicatorColor: Colors.grey[200],
+        elevation: 0,
         backgroundColor: Colors.white,
-        animationDuration: Duration(milliseconds: 1500),
+        animationDuration: const Duration(milliseconds: 1500),
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
           });
         },
-        indicatorColor: AppColor.btnColor,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(icon: Icon(Icons.home), label: 'Əsas'),
@@ -60,8 +63,8 @@ class _MainState extends State<Main> {
       body: <Widget>[
         /// Home page
         const HomePageView(),
-        const HomePageView(),
-        const HomePageView(),
+        const SearchView(),
+        const ListingView(),
         const HomePageView(),
         const HomePageView(),
 

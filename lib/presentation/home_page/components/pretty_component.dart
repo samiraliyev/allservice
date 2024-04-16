@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CleanHomeComponent extends StatelessWidget {
-  const CleanHomeComponent({Key? key}) : super(key: key);
+class PrettyAllComponent extends StatelessWidget {
+  const PrettyAllComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class CleanHomeComponent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Ev təmizliyi",
+            "Gözəllik salonu",
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 20),
           ),
@@ -26,19 +26,19 @@ class CleanHomeComponent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/cleaner1.png',
+                  'assets/images/pretty1.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
                 Image.asset(
-                  'assets/images/cleaner2.png',
+                  'assets/images/pretty2.png',
                 ),
                 const SizedBox(
                   width: 20,
                 ),
                 Image.asset(
-                  'assets/images/cleaner3.png',
+                  'assets/images/pretty3.png',
                 )
               ],
             ),

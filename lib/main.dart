@@ -1,6 +1,5 @@
+import 'package:allservice/presentation/SplashScreen/splash_page_view.dart';
 import 'package:flutter/material.dart';
-
-import 'presentation/sign_in_sign_up_page/sign_in_sign_up_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
         useMaterial3: true,
       ),
-      home: const SignInSignUpPage(),
+      home: const SplashPageView(),
     );
   }
 }

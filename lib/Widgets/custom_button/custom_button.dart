@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../../../constants/colors/app_colors.dart';
@@ -7,6 +6,8 @@ class CustomButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
   final double width;
+  final Color? bgColor;
+  final Color? textColor;
   final double? height;
   const CustomButton({
     super.key,
@@ -14,6 +15,8 @@ class CustomButton extends StatelessWidget {
     required this.onPressed,
     required this.width,
     this.height,
+    this.bgColor,
+    this.textColor,
   });
 
   @override

@@ -59,7 +59,8 @@ class _SaveCardState extends State<SaveCard> {
               value: light,
               overlayColor: overlayColor,
               trackColor: trackColor,
-              thumbColor: MaterialStatePropertyAll<Color>(AppColor.switchBtn),
+              thumbColor:
+                  const MaterialStatePropertyAll<Color>(AppColor.switchBtn),
               onChanged: (bool value) {
                 setState(() {
                   light = value;

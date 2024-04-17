@@ -3,8 +3,9 @@ import '../Constants/Strings/app_strings.dart';
 class OnboardModel {
   final String title;
   final String description;
-
+  final String conditionTerm;
   OnboardModel({
+    required this.conditionTerm,
     required this.title,
     required this.description,
   });
@@ -12,14 +13,17 @@ class OnboardModel {
     OnboardModel(
       title: AppString.onboardScreenTitle,
       description: AppString.onboardScreenDescription,
+      conditionTerm: AppString.confirmCondition,
     ),
     OnboardModel(
       title: AppString.onboardScreenTitle,
       description: AppString.onboardScreenDescription,
+      conditionTerm: AppString.confirmCondition,
     ),
     OnboardModel(
       title: AppString.onboardScreenTitle,
       description: AppString.onboardScreenDescription,
+      conditionTerm: AppString.confirmCondition,
     ),
   ];
 }

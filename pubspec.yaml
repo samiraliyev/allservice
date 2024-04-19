@@ -40,6 +40,9 @@ dependencies:
   google_fonts: ^6.2.1
   carousel_slider: ^4.2.1
   flutter_svg: ^2.0.10+1
+  email_validator: ^2.1.17
+  intl_phone_number_field: ^0.1.9
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_test:

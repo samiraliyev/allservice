@@ -7,6 +7,7 @@ import Foundation
 
 import file_selector_macos
 import firebase_core
+import path_provider_foundation
 import shared_preferences_foundation
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {

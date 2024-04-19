@@ -1,16 +1,13 @@
 import 'package:allservice/Widgets/custom_appbar.dart';
-import 'package:allservice/constants/colors/app_colors.dart';
 import 'package:allservice/presentation/profile_page/components/cards.dart';
 import 'package:allservice/presentation/profile_page/components/setting/details_pages/about.dart';
 import 'package:allservice/presentation/profile_page/components/setting/details_pages/rate_view.dart';
 import 'package:allservice/presentation/profile_page/components/setting/details_pages/support_view.dart';
 import 'package:allservice/presentation/profile_page/components/text_comp.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SettingPart extends StatelessWidget {
-  const SettingPart({Key? key}) : super(key: key);
+  const SettingPart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +16,7 @@ class SettingPart extends StatelessWidget {
         appBar: CustomAppbar(backgroundColor: Colors.white),
         body: SingleChildScrollView(
           child: Center(
-            child: Container(
+            child: SizedBox(
               height: MediaQuery.of(context).size.height,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -36,18 +33,18 @@ class SettingPart extends StatelessWidget {
                     height: 20,
                   ),
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: const EdgeInsets.all(25),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               blurRadius: 0.4,
                               color: Colors.grey,
                               offset: Offset(0.5, 0.8),
                               spreadRadius: 0.5)
                         ]),
-                    child: Column(
+                    child: const Column(
                       children: [
                         SettingsCards(
                             text: "Bildirişlər", leading: Icons.notifications),
@@ -61,11 +58,11 @@ class SettingPart extends StatelessWidget {
                     height: 20,
                   ),
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: const EdgeInsets.all(25),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white,
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               blurRadius: 0.4,
                               color: Colors.grey,
@@ -79,10 +76,10 @@ class SettingPart extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => RateView(),
+                                  builder: (context) => const RateView(),
                                 ));
                           },
-                          child: ProfilePageCard(
+                          child: const ProfilePageCard(
                               text: "All Serv-i  qiymətləndirin",
                               leading: Icons.star),
                         ),
@@ -91,10 +88,10 @@ class SettingPart extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AboutUsView(),
+                                  builder: (context) => const AboutUsView(),
                                 ));
                           },
-                          child: ProfilePageCard(
+                          child: const ProfilePageCard(
                               text: "Bizim haqqımızda",
                               leading: Icons.groups_rounded),
                         ),
@@ -103,10 +100,10 @@ class SettingPart extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => SupportView(),
+                                  builder: (context) => const SupportView(),
                                 ));
                           },
-                          child: ProfilePageCard(
+                          child: const ProfilePageCard(
                               text: "Dəstək", leading: Icons.help_rounded),
                         )
                       ],

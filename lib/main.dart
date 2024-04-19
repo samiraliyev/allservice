@@ -1,6 +1,5 @@
 import 'package:allservice/presentation/home_page/home_page_view.dart';
 import 'package:allservice/presentation/listing_page/listing_view.dart';
-import 'package:allservice/presentation/profile_page/components/setting/details_pages/support_view.dart';
 import 'package:allservice/presentation/profile_page/profile_view.dart';
 import 'package:allservice/presentation/search_page/search_view.dart';
 import 'package:flutter/material.dart';

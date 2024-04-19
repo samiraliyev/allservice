@@ -18,7 +18,7 @@ class SupportView extends StatelessWidget {
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,12 +34,12 @@ class SupportView extends StatelessWidget {
                     maxLines: 5, // Birden fazla satıra izin verir
                     decoration: InputDecoration(
                       filled: true,
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: const TextStyle(color: Colors.white),
                       fillColor: AppColor.btnColor,
                       hintText: 'Mesaj...',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.white)),
+                          borderSide: const BorderSide(color: Colors.white)),
                     ),
                   ),
                   const SizedBox(
@@ -57,8 +57,8 @@ class SupportView extends StatelessWidget {
                           color: AppColor.btnColor,
                         ),
                         padding:
-                            EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                        child: Row(
+                            const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -77,7 +77,7 @@ class SupportView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.location_pin,
                       size: 35,
@@ -94,7 +94,7 @@ class SupportView extends StatelessWidget {
                           TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.email,
                       size: 35,
@@ -111,7 +111,7 @@ class SupportView extends StatelessWidget {
                           TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       Icons.phone,
                       size: 35,

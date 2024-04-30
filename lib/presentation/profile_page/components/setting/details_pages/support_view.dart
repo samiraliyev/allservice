@@ -1,11 +1,10 @@
 import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/Widgets/custom_appbar.dart';
-import 'package:allservice/presentation/profile_page/components/setting/setting_part.dart';
 import 'package:allservice/presentation/profile_page/components/text_comp.dart';
 import 'package:flutter/material.dart';
 
 class SupportView extends StatelessWidget {
-  const SupportView({Key? key}) : super(key: key);
+  const SupportView({super.key});
 
   @override
   Widget build(BuildContext context) {

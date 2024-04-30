@@ -1,5 +1,6 @@
 import 'package:allservice/Constants/Strings/app_strings.dart';
 import 'package:allservice/Extensions/size_extension.dart';
+import 'package:allservice/main.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
@@ -328,7 +329,14 @@ class _LoginPageViewState extends State<LoginPageView> {
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      // login without registered
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Main(),
+                          ));
+                    },
                     child: const Text(
                       AppString.withoutAccountText,
                       style: TextStyle(

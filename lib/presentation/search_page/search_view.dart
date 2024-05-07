@@ -3,7 +3,6 @@ import 'package:allservice/Models/categories_models.dart';
 import 'package:allservice/Widgets/custom_appbar.dart';
 import 'package:allservice/presentation/category_detail_page/detail_view.dart';
 import 'package:allservice/presentation/search_page/components/categories_all.dart';
-import 'package:allservice/presentation/search_page/components/category_select.dart';
 import 'package:allservice/presentation/search_page/components/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

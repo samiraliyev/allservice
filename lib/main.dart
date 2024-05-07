@@ -1,8 +1,7 @@
-import 'package:allservice/Widgets/custom_appbar.dart';
-import 'package:allservice/constants/colors/app_colors.dart';
-import 'package:allservice/presentation/category_detail_page/detail_view.dart';
 import 'package:allservice/presentation/home_page/home_page_view.dart';
 import 'package:allservice/presentation/listing_page/listing_view.dart';
+import 'package:allservice/presentation/profile_page/components/setting/details_pages/support_view.dart';
+import 'package:allservice/presentation/profile_page/profile_view.dart';
 import 'package:allservice/presentation/search_page/search_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Onboard Page',
       theme: ThemeData(
-        appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
         // colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
         useMaterial3: true,
       ),
@@ -28,9 +27,10 @@ class MyApp extends StatelessWidget {
 }
 
 class Main extends StatefulWidget {
-  const Main({Key? key}) : super(key: key);
+  const Main({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MainState createState() => _MainState();
 }
 
@@ -66,7 +66,7 @@ class _MainState extends State<Main> {
         const SearchView(),
         const ListingView(),
         const HomePageView(),
-        const HomePageView(),
+        const ProfileView(),
 
         ///
       ][currentPageIndex],

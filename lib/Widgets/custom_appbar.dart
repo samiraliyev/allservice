@@ -1,6 +1,7 @@
 import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/Constants/font/text_font.dart';
 import 'package:allservice/Constants/path/app_path.dart';
+import 'package:allservice/presentation/notification_view/notificaton_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -28,7 +29,13 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         Stack(
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotificatonPageView(),
+                      ));
+                },
                 icon: const Icon(
                   Icons.notifications_none,
                   size: 30,

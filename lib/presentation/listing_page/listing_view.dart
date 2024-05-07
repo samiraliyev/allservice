@@ -4,10 +4,9 @@ import 'package:allservice/presentation/home_page/components/clean_home_componen
 import 'package:allservice/presentation/home_page/components/pretty_component.dart';
 import 'package:allservice/presentation/home_page/components/sitter_component.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ListingView extends StatelessWidget {
-  const ListingView({Key? key}) : super(key: key);
+  const ListingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,22 +15,18 @@ class ListingView extends StatelessWidget {
         backgroundColor: Colors.white,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [titleAppBarCustom(), locAppBarCustom()],
+          children: [TitleAppBarCustom(), LocAppBarCustom()],
         ),
       ),
       body: const Center(
         child: SingleChildScrollView(
-          child:  Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-                
               BodyAllComponent(),
-             
               CleanHomeComponent(),
-             
               PrettyAllComponent(),
-               
               SitterHomeComponent(),
             ],
           ),

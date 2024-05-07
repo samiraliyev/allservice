@@ -5,10 +5,10 @@ import 'package:allservice/presentation/category_detail_page/detail_view.dart';
 import 'package:allservice/presentation/search_page/components/categories_all.dart';
 import 'package:allservice/presentation/search_page/components/search_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class SearchView extends StatefulWidget {
-  const SearchView({Key? key}) : super(key: key);
+  const SearchView({super.key});
 
   @override
   State<SearchView> createState() => _SearchViewState();
@@ -17,13 +17,13 @@ class SearchView extends StatefulWidget {
 class _SearchViewState extends State<SearchView> {
   String? selectedCategory;
   final String assetName = 'assets/svg/clean1.svg';
-  final Widget svg = SvgPicture.asset(
-    'assets/svg/clean1.svg',
-    height: 30,
-    width: 30,
-    allowDrawingOutsideViewBox: true,
-    semanticsLabel: 'Acme logo',
-  );
+  // final Widget svg = SvgPicture.asset(
+  //   'assets/svg/clean1.svg',
+  //   height: 30,
+  //   width: 30,
+  //   allowDrawingOutsideViewBox: true,
+  //   semanticsLabel: 'Acme logo',
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class _SearchViewState extends State<SearchView> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            titleAppBarCustom(),
+            TitleAppBarCustom(),
           ],
         ),
       ),

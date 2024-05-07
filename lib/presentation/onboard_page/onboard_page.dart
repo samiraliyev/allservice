@@ -20,7 +20,10 @@ class _OnboardPageState extends State<OnboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: OnboardPageView(pageController: _pageController),
+      body: OnboardPageView(
+        pageController: _pageController,
+        currentPage: 1,
+      ),
     );
   }
 }

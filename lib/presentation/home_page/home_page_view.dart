@@ -16,14 +16,14 @@ class HomePageView extends StatelessWidget {
         title: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [titleAppBarCustom(), locAppBarCustom()],
+          children: [TitleAppBarCustom(), LocAppBarCustom()],
         ),
       ),
       backgroundColor: Colors.white,
       body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(10),
-          child:  Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

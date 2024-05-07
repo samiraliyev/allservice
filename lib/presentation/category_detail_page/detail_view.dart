@@ -63,21 +63,23 @@ class _DetailViewState extends State<DetailView> {
                               selectedCategory = categoryIndex.title;
                             });
                           },
-                          child: Container(
-                            alignment: Alignment.center,
-                            width: 100,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all()),
-                            child: Text(
-                              categoryIndex.title,
-                              style: TextStyle(
-                                  fontWeight:
-                                      categoryIndex.title == selectedCategory
-                                          ? FontWeight.bold
-                                          : FontWeight.normal,
-                                  color: Colors.black),
+                          child: Expanded(
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 100,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all()),
+                              child: Text(
+                                categoryIndex.title,
+                                style: TextStyle(
+                                    fontWeight:
+                                        categoryIndex.title == selectedCategory
+                                            ? FontWeight.bold
+                                            : FontWeight.normal,
+                                    color: Colors.black),
+                              ),
                             ),
                           ),
                         ),

@@ -1,5 +1,7 @@
+import 'package:allservice/presentation/SplashScreen/splash_page_view.dart';
 import 'package:allservice/presentation/home_page/home_page_view.dart';
 import 'package:allservice/presentation/listing_page/listing_view.dart';
+import 'package:allservice/presentation/profile_page/profile_view.dart';
 import 'package:allservice/presentation/profile_page/components/setting/details_pages/support_view.dart';
 import 'package:allservice/presentation/profile_page/profile_view.dart';
 import 'package:allservice/presentation/search_page/search_view.dart';
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: AppColor.primaryColor),
         useMaterial3: true,
       ),
-      home: const Main(),
+      home: const SplashPageView(),
     );
   }
 }

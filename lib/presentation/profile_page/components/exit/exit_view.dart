@@ -1,7 +1,6 @@
 import 'package:allservice/Widgets/custom_appbar.dart';
 import 'package:allservice/constants/colors/app_colors.dart';
 import 'package:allservice/presentation/profile_page/components/cards.dart';
-import 'package:allservice/presentation/profile_page/components/setting/setting_part.dart';
 import 'package:allservice/presentation/profile_page/components/text_comp.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

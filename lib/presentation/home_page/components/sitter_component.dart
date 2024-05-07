@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SitterHomeComponent extends StatelessWidget {
-  const SitterHomeComponent({Key? key}) : super(key: key);
+  const SitterHomeComponent({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

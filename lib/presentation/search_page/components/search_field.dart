@@ -2,7 +2,7 @@ import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SearchField extends StatelessWidget {
-  const SearchField({Key? key}) : super(key: key);
+  const SearchField({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class SearchField extends StatelessWidget {
           const Expanded(
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Axdar...',
+                hintText: 'Axtar...',
                 border: InputBorder.none,
               ),
             ),

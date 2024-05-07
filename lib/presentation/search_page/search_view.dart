@@ -40,7 +40,7 @@ class _SearchViewState extends State<SearchView> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            titleAppBarCustom(),
+            TitleAppBarCustom(),
           ],
         ),
       ),

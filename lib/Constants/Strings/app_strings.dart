@@ -23,4 +23,17 @@ class AppString {
   static const String fullName = "Ad və soyad";
   static const String emailHintText = "Email";
   static const String nameErrorText = "Ad və ya soyad düzgün deyil";
+  static const String notificationPageTitle = "Bildirişlər və yeniliklər";
+  static const String notificationCount = "100 bildiriş var";
+  static const String notificationCardTitle = "Max-fit tərəfindən";
+  static const String notificationCardSubtitle =
+      "Üzgüçülük dərslərinə 50% endirim";
+  static const String nearService = "Sizə yaxın ola xidmətlər";
+  static const String userFullName = "Mustafayev Sərdar";
+  static const String userLocation = "Ev 12 Səməd Vurğun";
+  static const String userCurrentAddress =
+      "2972 Westheimer Rd. Santa Ana, Illinois 85486 ";
+
+  static const String addNewLocationButton = "Yeni yer əlavə et";
+  static const String currentAddress = "Ünvan";
 }

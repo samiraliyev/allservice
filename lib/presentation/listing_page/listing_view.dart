@@ -15,7 +15,7 @@ class ListingView extends StatelessWidget {
         backgroundColor: Colors.white,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [titleAppBarCustom(), locAppBarCustom()],
+          children: [TitleAppBarCustom(), LocAppBarCustom()],
         ),
       ),
       body: const Center(

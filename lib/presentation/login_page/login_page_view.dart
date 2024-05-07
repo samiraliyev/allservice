@@ -1,11 +1,11 @@
 import 'package:allservice/Constants/Strings/app_strings.dart';
 import 'package:allservice/Extensions/size_extension.dart';
-import 'package:allservice/main.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 
 import '../../Constants/Colors/app_colors.dart';
 import '../../Constants/path/app_path.dart';
+import '../notification_view/notificaton_page_view.dart';
 
 class LoginPageView extends StatefulWidget {
   const LoginPageView({super.key});
@@ -334,7 +334,7 @@ class _LoginPageViewState extends State<LoginPageView> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Main(),
+                            builder: (context) => const NotificatonPageView(),
                           ));
                     },
                     child: const Text(

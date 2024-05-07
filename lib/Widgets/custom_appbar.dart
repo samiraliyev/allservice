@@ -2,6 +2,9 @@ import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/Constants/font/text_font.dart';
 import 'package:allservice/Constants/path/app_path.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import '../presentation/map/map_view.dart';
 
 // ignore: must_be_immutable
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
@@ -26,7 +29,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.notifications_none,
                   size: 30,
                   color: AppColor.btnColor,
@@ -47,7 +50,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           width: 10,
         ),
         Padding(
-          padding: EdgeInsets.only(right: 10),
+          padding: const EdgeInsets.only(right: 10),
           child: CircleAvatar(
             child: ClipOval(
               child: Image.asset(AppPath.logo),
@@ -65,8 +68,9 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
 
 //Hello for user with his name [component]
 
-class titleAppBarCustom extends StatelessWidget {
-  const titleAppBarCustom({Key? key}) : super(key: key);
+// ignore: camel_case_types
+class TitleAppBarCustom extends StatelessWidget {
+  const TitleAppBarCustom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,19 +80,18 @@ class titleAppBarCustom extends StatelessWidget {
             text: "Salam ",
             style: AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500)),
         TextSpan(
-            text: "Sərdar",
-            style: AppFonts.pacifico(
-                color: AppColor.btnColor,
-                size: 18,
-                fontWeight: FontWeight.w500))
+          text: "Sərdar",
+          style: AppFonts.pacifico(
+              color: AppColor.btnColor, size: 18, fontWeight: FontWeight.w500),
+        ),
       ]),
     );
   }
 }
 
 //Localation helper for app bar
-class locAppBarCustom extends StatelessWidget {
-  const locAppBarCustom({Key? key}) : super(key: key);
+class LocAppBarCustom extends StatelessWidget {
+  const LocAppBarCustom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -96,22 +99,31 @@ class locAppBarCustom extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(
-          AppPath.logo,
-          width: 28,
+        GestureDetector(
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const MapView(),
+            ),
+          ),
+          child: Image.asset(
+            AppPath.logo,
+            width: 28,
+          ),
         ),
         RichText(
           text: TextSpan(children: [
             TextSpan(
-                text: "Yer",
-                style:
-                    AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500)),
+              text: "Yer",
+              style: AppFonts.pacifico(size: 18, fontWeight: FontWeight.w500),
+            ),
             TextSpan(
-                text: " : Baku",
-                style: AppFonts.pacifico(
-                    color: AppColor.btnColor,
-                    size: 18,
-                    fontWeight: FontWeight.w500))
+              text: " : Baku",
+              style: AppFonts.pacifico(
+                  color: AppColor.btnColor,
+                  size: 18,
+                  fontWeight: FontWeight.w500),
+            ),
           ]),
         ),
       ],

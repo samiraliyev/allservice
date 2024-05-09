@@ -1,18 +1,26 @@
 import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/Constants/Strings/app_strings.dart';
 import 'package:allservice/Extensions/size_extension.dart';
+import 'package:allservice/main.dart';
+import 'package:allservice/presentation/profile_page/profile_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 
 import '../../Widgets/custom_appbar.dart';
 import '../../Widgets/custom_button/custom_button.dart';
 
-class ReservPageView extends StatelessWidget {
+class ReservPageView extends StatefulWidget {
   const ReservPageView({
     super.key,
   });
 
+  @override
+  State<ReservPageView> createState() => _ReservPageViewState();
+}
+
+class _ReservPageViewState extends State<ReservPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,40 +102,43 @@ class ReservPageView extends StatelessWidget {
             ),
           ),
           300.h,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      10.0,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        10.0,
+                      ),
+                    ),
+                  ),
+                  child: Expanded(
+                    child: CustomButton(
+                      text: 'Növbəti',
+                      textColor: AppColor.btnColor,
+                      onPressed: () {},
+                      width: MediaQuery.of(context).size.width * 0.4,
+                      height: 50.0,
                     ),
                   ),
                 ),
-                child: Expanded(
+                50.w,
+                Expanded(
                   child: CustomButton(
-                    text: 'Növbəti',
+                    text: 'Evə xidmət',
                     textColor: AppColor.btnColor,
+                    bgColor: Colors.white,
                     onPressed: () {},
                     width: MediaQuery.of(context).size.width * 0.4,
                     height: 50.0,
                   ),
                 ),
-              ),
-              50.w,
-              Expanded(
-                child: CustomButton(
-                  text: 'Evə xidmət',
-                  textColor: AppColor.btnColor,
-                  bgColor: Colors.white,
-                  onPressed: () {},
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  height: 50.0,
-                ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),

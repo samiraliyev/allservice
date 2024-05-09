@@ -16,7 +16,7 @@ class _ProfilePageCardState extends State<ProfilePageCard> {
     return Column(children: [
       Container(
         alignment: Alignment.center,
-        width: MediaQuery.of(context).size.width / 2,
+        width: MediaQuery.of(context).size.width / 1.5,
         decoration: BoxDecoration(boxShadow: const [
           BoxShadow(
               blurRadius: 0.4,

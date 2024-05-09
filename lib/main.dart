@@ -1,6 +1,8 @@
+import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/presentation/home_page/home_page_view.dart';
 import 'package:allservice/presentation/listing_page/listing_view.dart';
 import 'package:allservice/presentation/profile_page/profile_view.dart';
+import 'package:allservice/presentation/reserv_page/reserv_page_view.dart';
 import 'package:allservice/presentation/search_page/search_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +11,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,50 +29,61 @@ class MyApp extends StatelessWidget {
 }
 
 class Main extends StatefulWidget {
-  const Main({super.key});
+  const Main({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _MainState createState() => _MainState();
 }
 
 class _MainState extends State<Main> {
   int currentPageIndex = 0;
+  final List<Widget> _pages = [
+    const HomePageView(),
+    const SearchView(),
+    const ListingView(),
+    const ReservPageView(),
+    const ProfileView(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      currentPageIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: NavigationBar(
-          indicatorColor: Colors.grey[200],
-          elevation: 0,
-          backgroundColor: Colors.white,
-          animationDuration: const Duration(milliseconds: 1500),
-          onDestinationSelected: (int index) {
-            setState(() {
-              currentPageIndex = index;
-            });
-          },
-          selectedIndex: currentPageIndex,
-          destinations: const <Widget>[
-            NavigationDestination(icon: Icon(Icons.home), label: 'Əsas'),
-            NavigationDestination(icon: Icon(Icons.search), label: 'Axtar'),
-            NavigationDestination(
-                icon: Icon(Icons.category), label: 'Kateqoriya'),
-            NavigationDestination(
-                icon: Icon(Icons.watch_later_outlined), label: 'Rezerv'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'Profil'),
+        body: _pages[currentPageIndex], // Burada sayfa içeriğini gösteriyoruz
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Əsas',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Axdarış',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.category_outlined),
+              label: 'Kategoriya',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.watch_later_outlined),
+              label: 'Rezerv',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_2_outlined),
+              label: 'Profil',
+            ),
           ],
+          currentIndex: currentPageIndex,
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Colors.blue,
+          onTap: _onItemTapped,
         ),
-        body: <Widget>[
-          /// Home page
-          const HomePageView(),
-          const SearchView(),
-          const ListingView(),
-          const HomePageView(),
-          const ProfileView(),
-
-          ///
-        ][currentPageIndex],
       ),
     );
   }

@@ -1,12 +1,12 @@
 import 'package:allservice/Models/categories_models.dart';
 import 'package:allservice/constants/colors/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CategorySelect extends StatefulWidget {
-  const CategorySelect({Key? key}) : super(key: key);
+  const CategorySelect({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CategorySelectState createState() => _CategorySelectState();
 }
 
@@ -14,7 +14,7 @@ class _CategorySelectState extends State<CategorySelect> {
   String? selectedCategory;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 40,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -26,7 +26,7 @@ class _CategorySelectState extends State<CategorySelect> {
               categoriesBannerList[index];
           return Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               GestureDetector(

@@ -36,4 +36,5 @@ class AppString {
 
   static const String addNewLocationButton = "Yeni yer əlavə et";
   static const String currentAddress = "Ünvan";
+  static const String reservTitle = "Gözəllik salonu : Beauty-shop";
 }

@@ -1,6 +1,7 @@
 import 'package:allservice/Constants/Colors/app_colors.dart';
 import 'package:allservice/Models/categories_models.dart';
 import 'package:allservice/Widgets/custom_appbar.dart';
+import 'package:allservice/presentation/reserv_page/reserv_page_view.dart';
 import 'package:allservice/presentation/search_page/components/categories_all.dart';
 import 'package:flutter/material.dart';
 
@@ -166,7 +167,14 @@ class _DetailViewState extends State<DetailView> {
                 subtitle: Text("050-500-50-50"),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ReservPageView(),
+                    ),
+                  );
+                },
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Container(

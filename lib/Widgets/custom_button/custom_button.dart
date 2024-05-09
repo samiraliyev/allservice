@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/colors/app_colors.dart';
+
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -26,10 +26,11 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            foregroundColor: AppColor.titleColor,
+            // foregroundColor: AppColor.titleColor,
+
             shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            )),
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        )),
         child: Text(
           text,
           style: const TextStyle(

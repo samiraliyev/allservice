@@ -102,105 +102,103 @@ class _SearchViewState extends State<SearchView> {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
-                  child: ListView.builder(
-                    primary: false,
-                    shrinkWrap: true,
-                    itemCount: filteredCategoriesList.length,
-                    itemBuilder: (context, index) {
-                      final category = filteredCategoriesList[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            PageRouteBuilder(
-                              transitionDuration:
-                                  const Duration(milliseconds: 500),
-                              reverseTransitionDuration:
-                                  const Duration(milliseconds: 500),
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) =>
-                                      FadeTransition(
-                                opacity: animation,
-                                child:
-                                    DetailView(categoryModelProduct: category),
-                              ),
+                ListView.builder(
+                  primary: false,
+                  shrinkWrap: true,
+                  itemCount: filteredCategoriesList.length,
+                  itemBuilder: (context, index) {
+                    final category = filteredCategoriesList[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            transitionDuration:
+                                const Duration(milliseconds: 500),
+                            reverseTransitionDuration:
+                                const Duration(milliseconds: 500),
+                            pageBuilder:
+                                (context, animation, secondaryAnimation) =>
+                                    FadeTransition(
+                              opacity: animation,
+                              child:
+                                  DetailView(categoryModelProduct: category),
                             ),
-                          );
-                        },
+                          ),
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
                         child: Container(
-                          padding: const EdgeInsets.all(5),
-                          child: Container(
-                            padding: const EdgeInsets.all(2),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                    blurRadius: 5,
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 3,
-                                    offset: const Offset(0, 3))
-                              ],
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(5),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Flexible(
-                                    flex: 3,
-                                    child: Image.asset(category.image),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Flexible(
-                                    flex: 3,
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Align(
-                                          alignment: Alignment.centerLeft,
-                                          child: Text(
-                                            category.title,
-                                            style: const TextStyle(
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        Text(
-                                          category.subtitle,
+                          padding: const EdgeInsets.all(2),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                  blurRadius: 5,
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 3,
+                                  offset: const Offset(0, 3))
+                            ],
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Flexible(
+                                  flex: 3,
+                                  child: Image.asset(category.image),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Flexible(
+                                  flex: 3,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.centerLeft,
+                                        child: Text(
+                                          category.title,
                                           style: const TextStyle(
-                                              color: Colors.grey),
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
                                         ),
-                                        Row(
-                                          children: [
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.yellow[700],
-                                            ),
-                                            Text("${category.raiting} | "),
-                                            Text(category.degree)
-                                          ],
-                                        )
-                                      ],
-                                    ),
+                                      ),
+                                      Text(
+                                        category.subtitle,
+                                        style: const TextStyle(
+                                            color: Colors.grey),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.yellow[700],
+                                          ),
+                                          Text("${category.raiting} | "),
+                                          Text(category.degree)
+                                        ],
+                                      )
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    );
+                  },
                 )
               ],
             ),

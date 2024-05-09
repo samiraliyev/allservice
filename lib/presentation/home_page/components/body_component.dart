@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BodyAllComponent extends StatelessWidget {
-  const BodyAllComponent({Key? key}) : super(key: key);
+  const BodyAllComponent({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

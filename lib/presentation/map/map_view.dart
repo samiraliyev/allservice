@@ -4,9 +4,7 @@ import 'package:allservice/Extensions/size_extension.dart';
 import 'package:allservice/constants/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../Widgets/control_button.dart';
 import '../../Widgets/custom_appbar.dart';
-import '../../Widgets/custom_button/custom_button.dart';
 
 class MapView extends StatelessWidget {
   const MapView({super.key});

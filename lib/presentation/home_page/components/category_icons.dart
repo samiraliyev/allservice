@@ -19,7 +19,7 @@ class CategoryIcons extends StatelessWidget {
           return Container(
             child: Image.asset(
               iconIndex.icon,
-              width: 50,
+              width: 49,
             ),
           );
         },
